@@ -1,0 +1,196 @@
+@font-face {
+    font-family: "roboto_regular";
+    src: url(../fonts/roboto-regular-webfont.woff) format("woff"),
+        url(../fonts/roboto-regular-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "roboto_thin";
+    src: url(../fonts/roboto-thin-webfont.woff) format("woff"),
+        url(../fonts/roboto-thin-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "roboto_bold";
+    src: url(../fonts/roboto-bold-webfont.woff) format("woff"),
+        url(../fonts/roboto-bold-webfont.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "roboto_italic";
+    src: url(../fonts/roboto-italic-webfont.woff) format("woff"),
+        url(../fonts/roboto-italic-webfont.woff2) format("woff2");
+}
+
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+.header__content {
+	font-family: "roboto_thin";
+
+	background: #272727;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__logo {
+	width: 200px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.menu-item {
+
+	display: block;
+	padding: 0 10px;
+}
+.menu-item a {
+	color: white;
+	text-decoration: none;
+}
+.menu-item:hover {
+	border-bottom: 1px solid purple;
+}
+.menu-item:hover .sub-menu {
+	display: block;
+}
+.sub-menu {
+	display: none;
+}
+
+.current-menu-item {
+	border-bottom: 1px solid white;
+}
+
+.header {
+padding: 0 0 1rem 0;
+	margin-bottom: 50px;
+	background: #272727;
+}
+
+.wp-block-quote {
+	margin-left: 10px;
+	border-left: 1px solid red;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 22px;
+	padding-left: 20px;
+}
+.post_title {
+	font-size: 28px;
+}
+.page-builder {
+	margin-top: 50px;
+}
+.page-builder * + * {
+	margin-top: 10px;
+}
+.page-builder h2 {
+	font-size: 40px;
+}
+.page-builder {
+	font-size: 16px;
+}
+
+
+.split-sidebar {
+	display: flex;
+}
+.split-sidebar .column-main {
+	width: 70%;
+}
+.split-sidebar .column-sidebar {
+	width: 30%;
+}
+
+
+.widgettitle {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.footer {
+	padding: 50px 0;
+	background-color: #272727;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+
+.footer_text {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	line-height: 18.5pt;
+	font-family: "roboto_thin";
+
+}
+
+
+.header_child {
+	max-width: 400px;
+	padding-top: 1rem;
+}
+
+
+@media screen and (min-width: 500px) {
+	.header__content {
+		flex-direction: row;
+	}
+	
+	
+	.header_child{
+		flex-direction: row;
+
+	}
+}
