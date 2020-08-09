@@ -23,7 +23,7 @@
           <div class="page-builder">
             <?php the_content(); ?>
           </div>
-            <?php the_tags(); ?>
+          
         </div>
 
         <?php get_sidebar(); ?>

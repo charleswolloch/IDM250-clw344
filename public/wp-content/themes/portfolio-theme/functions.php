@@ -88,3 +88,6 @@ function register_theme_navigation() {
 }
 
 add_action('after_setup_theme', 'register_theme_navigation');
+
+
+require get_template_directory() . '/lib/custom-post-type.php';
