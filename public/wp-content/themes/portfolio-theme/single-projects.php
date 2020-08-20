@@ -15,7 +15,7 @@
            <?php the_post_thumbnail('thumbnail', array('class'=> 'post_image')); ?> 
           
         </div>
-          </div>
+        </div>
     <div class="container">
           <div class="page-builder">
             <?php the_content(); ?>
