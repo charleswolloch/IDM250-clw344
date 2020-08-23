@@ -1,4 +1,23 @@
 <?php
+
+/**
+ * Set search results limit to 100 / Remove pages from results
+ *
+ * @link https://www.wpexplorer.com/limit-wordpress-search/
+ * @return void
+ */
+function exclude_pages_from_search($query) {
+    if ( $query->is_main_query() && is_search() ) {
+        $query->set( 'posts_per_page', '100' );
+        global $wp_post_types;
+        $wp_post_types['page']->exclude_from_search = true;
+       
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts','exclude_pages_from_search' );
+
+
 /**
  * This file will be the main place to add custom php code into your theme
  *
@@ -93,3 +112,24 @@ add_action('after_setup_theme', 'register_theme_navigation');
 require get_template_directory() . '/lib/custom-post-type.php';
 
 require get_template_directory() . '/lib/acf.php';
+
+/**
+ * Set Custom WP Login Logo
+ *
+ * @link https://www.wpexplorer.com/limit-wordpress-search/
+ * @return void
+ */
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/dist/images/cw_logo_black.png);
+        margin: auto;
+		height: 10rem;
+		width: auto;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+        	padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
